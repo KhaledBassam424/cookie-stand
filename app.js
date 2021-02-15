@@ -95,12 +95,12 @@ let Tokyo = {
         return this.totalSumofCookies
 },
 render:function(){
-    let divEl = document.getElementById('two');
-    let H3=document.createElement('h3')
-    divEl.appendChild(H3);
+    let divEl = document.getElementById('one');
+    let header2=document.createElement('h2')
+    divEl.appendChild(header2);
     let hrr=document.createElement('hr')
     divEl.appendChild(hrr);
-    H3.textContent = 'Tokyo'
+    header2.textContent = 'Tokyo'
     let ulEl = document.createElement('ul');
     divEl.appendChild(ulEl);
     // each time im creating a list item
@@ -158,12 +158,12 @@ let Dubai = {
         return this.totalSumofCookies
 },
 render:function(){
-    let divEl = document.getElementById('two');
-    let H5=document.createElement('h5')
-    divEl.appendChild(H5);
+    let divEl = document.getElementById('one');
+    let header2=document.createElement('h2')
+    divEl.appendChild(header2);
     let hrr=document.createElement('hr')
     divEl.appendChild(hrr);
-    H5.textContent = 'Dubai'
+    header2.textContent = 'Dubai'
     let ulEl = document.createElement('ul');
     divEl.appendChild(ulEl);
     // each time im creating a list item
@@ -223,12 +223,12 @@ sumofTotalCookies: function(){
     return this.totalSumofCookies
 },
 render:function(){
-    let divEl = document.getElementById('two');
-    let H5=document.createElement('h5')
-    divEl.appendChild(H5);
+    let divEl = document.getElementById('one');
+    let header2=document.createElement('h2')
+    divEl.appendChild(header2);
     let hrr=document.createElement('hr')
     divEl.appendChild(hrr);
-    H5.textContent = 'Paris'
+    header2.textContent = 'Paris'
     let ulEl = document.createElement('ul');
     divEl.appendChild(ulEl);
     // each time im creating a list item
@@ -287,12 +287,12 @@ let Lima = {
     },
     
 render:function(){
-    let divEl = document.getElementById('two');
-    let H5=document.createElement('h5')
-    divEl.appendChild(H5);
+    let divEl = document.getElementById('one');
+    let header2=document.createElement('h2')
+    divEl.appendChild(header2);
     let hrr=document.createElement('hr')
     divEl.appendChild(hrr);
-    H5.textContent = 'Lima'
+    header2.textContent = 'Lima'
     let ulEl = document.createElement('ul');
     divEl.appendChild(ulEl);
     // each time im creating a list item
