@@ -6,15 +6,19 @@ let hours = ["6am", "7am", "8am", "9am","10am", "11am","12pm", "1pm", "2pm", "3p
   let div = document.getElementById("cookiesdetals");
   let table = document.createElement("table");
   div.appendChild(table);
+ 
+
+ 
   
   let shops = [];
   
-  function SalmonCook(country, maxValue, minValue, avgValue) {
-    this.max = maxValue;
-    this.min = minValue;
-    this.avg = avgValue;
+  function SalmonCook(country, minValue, maxValue, avgValue) {
     this.country = country;
+    this.min = minValue;
+    this.max = maxValue;
+    this.avg = avgValue;
     this.sum = 0;
+   
     
     this.cusPerhour = [];
     this.cookperHour = [];
@@ -42,21 +46,8 @@ let hours = ["6am", "7am", "8am", "9am","10am", "11am","12pm", "1pm", "2pm", "3p
     }
     return this.sum;
   };
-  
-  let tr = document.createElement("tr");
-  table.appendChild(tr);
-  let th = document.createElement("th");
-  tr.appendChild(th);
-  
-  for (let i = 0; i < hours.length; i++) {
-    let th = document.createElement("th");
-    tr.appendChild(th);
-    th.textContent = hours[i];
-  }
-  
-  let totloc = document.createElement("th");
-  tr.appendChild(totloc);
-  totloc.textContent = "Daily Location Total ";
+ 
+ 
   
   SalmonCook.prototype.render = function () {
     let tr1 = document.createElement("tr");
@@ -77,6 +68,32 @@ let hours = ["6am", "7am", "8am", "9am","10am", "11am","12pm", "1pm", "2pm", "3p
   };
   
   
+  
+  
+  const form = document.getElementById('AmmanForm');
+  
+  form.addEventListener('submit', ammanObjectCreator)
+  
+  
+  function ammanObjectCreator(event){
+    event.preventDefault();
+   
+    const countryName=event.target.countryNameField.value;
+    
+    const minHourlyCustValue = event.target.minValueField.value;
+    
+    const maxHourlyCustValue = event.target.maxValueField.value;
+    
+    const avgHourlyCustomers = event.target.avgValueField.value;
+    
+    table.innerHTML=""
+    
+    
+  let tr = document.createElement("tr");
+  table.appendChild(tr);
+  let th = document.createElement("th");
+  tr.appendChild(th);
+
   
   
   let seattle = new SalmonCook("seattle", 23, 65,6.3);
@@ -115,8 +132,30 @@ let hours = ["6am", "7am", "8am", "9am","10am", "11am","12pm", "1pm", "2pm", "3p
   
   
   
-  
-  let arrofobjects=[seattle,Tokyo,Dubai,Paris,Lima];
+  for (let i = 0; i < hours.length; i++) {
+    let th = document.createElement("th");
+    tr.appendChild(th);
+    th.textContent = hours[i];
+  }
+ 
+  let totloc = document.createElement("th");
+  tr.appendChild(totloc);
+  totloc.textContent = "Daily Location Total ";
+
+    let newLocation=new SalmonCook(countryName, parseInt(minHourlyCustValue), parseInt(maxHourlyCustValue), parseFloat(avgHourlyCustomers))
+    
+    // console.log(Amman)
+    newLocation.customerperHour();
+    newLocation.cookiesPerhour();
+    newLocation.summation();
+    newLocation.render();
+    
+    console.log(newLocation)
+    let arrofobjects=[seattle,Tokyo,Dubai,Paris,Lima];
+    arrofobjects.push(newLocation)
+
+
+    
   
   totalPerhour();
   
@@ -134,7 +173,7 @@ let hours = ["6am", "7am", "8am", "9am","10am", "11am","12pm", "1pm", "2pm", "3p
     
     for (let j =0 ; j< arrofobjects.length ; j++){
         additionPerHour = additionPerHour + arrofobjects[j].cookperHour[i]
-  
+         console.log(additionPerHour)
     }
   
     td = document.createElement('td');
@@ -149,4 +188,18 @@ let hours = ["6am", "7am", "8am", "9am","10am", "11am","12pm", "1pm", "2pm", "3p
   td.textContent=totaltotal
   
   }
+ 
+  }  
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
