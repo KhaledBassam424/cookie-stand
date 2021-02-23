@@ -30,6 +30,9 @@ header nav li{
 header nav li a{
     color: azure;
 }
+header nav li a:hover{
+    color: red;
+}
 .one{
     font-family: 'Pacifico', cursive; 
     margin-left: 10px;

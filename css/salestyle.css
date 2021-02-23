@@ -39,7 +39,9 @@ header nav li a{
     color: azure;
 }
 
-
+header nav li a:hover{
+    color: red;
+}
 footer{
     width: auto;
     background-color: chartreuse;
