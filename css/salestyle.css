@@ -1,0 +1,62 @@
+table{
+    border: 1px solid red;
+    background-color: cyan;
+}
+th,td{
+    border:1px solid royalblue;
+}
+
+body{
+    background-color: lightgrey;
+    width: 100%;
+}
+
+
+header{
+    background-color: rgba(172, 48, 161, 0.966);
+    height: 72px;
+    margin-right: 5px;
+    
+
+}
+header img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 80px;
+    top: 0.5px;
+}
+
+header nav li{
+    display: inline;
+    position: relative;
+    left: 900px;
+    bottom: 30px;
+    margin: 20px;
+    
+}
+header nav li a{
+    color: azure;
+}
+
+
+footer{
+    width: auto;
+    background-color: chartreuse;
+    clear: both;
+  border: black 2px solid;
+  position: relative;
+  top: 300px;
+}
+
+#footer1, #footer2{
+    float: left;
+    margin-left: 10px;
+    
+}
+
+footer div p{
+    position: relative;
+    left: 500px;
+    top: 40px;
+}
